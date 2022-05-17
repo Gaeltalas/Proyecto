@@ -40,14 +40,15 @@
             display: grid;
             width: 300px;
             grid-template-rows: auto 1fr auto ;
+            justify-items: center;
         }
 
         .logo
         {
-        width: 150px;
-        margin-bottom: 48px;
-        justify-self: center;
-        display: none;
+            width: 150px;
+            margin-bottom:48px;
+            justify-content: center;
+            display: none;
         }
 
         .title
@@ -67,28 +68,37 @@
             text-align: center;
         }
 
-        .label
+        .email-image
         {
-            font-size: var(--sm);
-            font-weight:bold;
-            margin-bottom: 4px;
-        }
-
-        .input
-        {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
             background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
         }
 
-        .form
+        .email-image img
         {
-            display: flex;
-            flex-direction: column;
+            width: 80px;
+        }
+
+        .resend
+        {
+            font-size:var(--sm);
+        }
+
+        .resend span
+        {
+            color: var(--very-light-pink);
+        }
+
+        .resend a 
+        {
+            color: var(--hospital-green);
+            text-decoration: none;
         }
 
         .primary-button
@@ -124,20 +134,19 @@
         <div class="form-container">
 
             <img src="./curso-frontend-developer-practico-main/logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a New password for you account</p>
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
 
-        <form action="/" class="form">
+            <div class="email-image">
+                <img src="./curso-frontend-developer-practico-main/icons/email.svg" alt="email">
+            </div>
 
-            <label for="new-password" class="label">Password</label>
-            <input type="password" id="new-password" placeholder="*********" class="input input-password">            
-            
-            <label for="new-password" class="label">Password</label>
-            <input type="password" id="new-password" placeholder="*********" class="input input-password">    
-            
-            <input type="submit" value="Confirm" class="primary-button login-button">
-        </form>    
+            <button class="primary-button login-button">Login</button>
 
+            <p class="resend">
+                <span>Didn't receive the email?</span>
+                <a href="href="/">Resend</a>
+            </p>
         </div>
     </div>
 </body>
